@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree Traversal Visualization</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Tree Traversal Visualization</h1>
+        
+        <div class="input-section">
+            <h2>Enter Tree Nodes</h2>
+            <p>Enter nodes in level order (use 'null' for empty nodes)</p>
+            <input type="text" id="treeInput" placeholder="1,2,3,4,5,6,7">
+            <div class="buttons">
+                <button onclick="traverse('inorder')">Inorder Traversal</button>
+                <button onclick="traverse('preorder')">Preorder Traversal</button>
+                <button onclick="traverse('postorder')">Postorder Traversal</button>
+            </div>
+        </div>
+
+        <div class="visualization">
+            <h2>Tree Visualization</h2>
+            <div id="treeCanvas"></div>
+        </div>
+
+        <div class="result">
+            <h2>Traversal Result</h2>
+            <div id="traversalResult"></div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html> 
